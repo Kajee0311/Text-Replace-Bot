@@ -36,21 +36,21 @@ async def editing(bot, message):
                  chat_id = message.chat.id, 
                  message_id = message.message_id,
                  caption = file_caption.replace(RE1TXT, REPLACED).replace(RE2TXT, REPLACED).replace(RE3TXT, REPLACED).replace(RE4TXT, REPLACED).replace(RE5TXT, REPLACED).replace(RE6TXT, REPLACED) + "\n\n" + caption_text, 
-                 parse_mode = "markdown"
+                 parse_mode = "html"
              )
           elif caption_position == "top":
              await bot.edit_message_caption(
                  chat_id = message.chat.id, 
                  message_id = message.message_id,
                  caption = caption_text + file_caption.replace(RE1TXT, REPLACED).replace(RE2TXT, REPLACED).replace(RE3TXT, REPLACED).replace(RE4TXT, REPLACED).replace(RE5TXT, REPLACED).replace(RE6TXT, REPLACED),
-                 parse_mode = "markdown"
+                 parse_mode = "html"
              )
           elif caption_position == "nil":
              await bot.edit_message_caption(
                  chat_id = message.chat.id,
                  message_id = message.message_id,
                  caption = caption_text, 
-                 parse_mode = "markdown"
+                 parse_mode = "html"
              ) 
       except:
           pass
