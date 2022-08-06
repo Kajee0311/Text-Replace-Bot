@@ -7,7 +7,7 @@ import asyncio
 from pyrogram import filters
 from bot import autoforward
 from config import Config
-from Plugins import RE1TXT, RE2TXT, RE3TXT, RE4TXT, RE5TXT, RE6TXT, REPLACED
+from Plugins import RE1TXT, RE2TXT, RE3TXT, RE4TXT, RE5TXT, RE6TXT, REPLACED1,REPLACED2,REPLACED3,REPLACED4,REPLACED5,REPLACED6
 
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
@@ -35,14 +35,14 @@ async def editing(bot, message):
              await bot.edit_message_caption(
                  chat_id = message.chat.id, 
                  message_id = message.message_id,
-                 caption = file_caption.replace(RE1TXT, REPLACED).replace(RE2TXT, REPLACED).replace(RE3TXT, REPLACED).replace(RE4TXT, REPLACED).replace(RE5TXT, REPLACED).replace(RE6TXT, REPLACED) + "\n\n" + caption_text, 
+                 caption = file_caption.replace(RE1TXT, REPLACED1).replace(RE2TXT, REPLACED2).replace(RE3TXT, REPLACED3).replace(RE4TXT, REPLACED4).replace(RE5TXT, REPLACED5).replace(RE6TXT, REPLACED6) + "\n\n" + caption_text, 
                  parse_mode = "html"
              )
           elif caption_position == "top":
              await bot.edit_message_caption(
                  chat_id = message.chat.id, 
                  message_id = message.message_id,
-                 caption = caption_text + file_caption.replace(RE1TXT, REPLACED).replace(RE2TXT, REPLACED).replace(RE3TXT, REPLACED).replace(RE4TXT, REPLACED).replace(RE5TXT, REPLACED).replace(RE6TXT, REPLACED),
+                 caption = caption_text + file_caption.replace(RE1TXT, REPLACED1).replace(RE2TXT, REPLACED2).replace(RE3TXT, REPLACED3).replace(RE4TXT, REPLACED4).replace(RE5TXT, REPLACED5).replace(RE6TXT, REPLACED6),
                  parse_mode = "html"
              )
           elif caption_position == "nil":
