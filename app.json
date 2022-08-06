@@ -38,8 +38,8 @@
       "value": "", 
       "required": false
     },
-    "REPLACED": {
-      "description": "replace with",
+    "REPLACED1": {
+      "description": "replace 1 with",
       "value": "", 
       "required": false
     },
